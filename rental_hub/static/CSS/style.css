@@ -1,4 +1,34 @@
-{
-    margin: 5px;
-    padding:
+* {
+    font-family: 'Hermit', monospace;
+}
+#log-reg {
+    display: flex;
+    justify-content: space-between;
+}
+#log-reg > section {
+    width: 50%;
+    margin: 0 2em;
+}
+#quotes {
+    padding: 10px;
+}
+
+ul.messages {
+    list-style: none;
+}
+li.error {
+    color: firebrick;
+}
+li.success {
+    color: forestgreen;
+}
+
+section {
+    display: inline-block;
+}
+
+body {
+    background-image:url('{{ STATIC_URL }}images/homebackground.JPG');
+    background-repeat:no-repeat;
+    background-size:100%;
 }

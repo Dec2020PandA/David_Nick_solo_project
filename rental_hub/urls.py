@@ -7,5 +7,5 @@ urlpatterns = [
     path('login', views.login),
     path('logout', views.logout),
     path('main', views.main),
-    path('/markets', views.markets)
+    # path('market/<int:market_id>', views.markets)
 ]

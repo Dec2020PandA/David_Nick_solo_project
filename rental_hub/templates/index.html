@@ -3,10 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rental Hub</title>
+    <title>Rentals Hub</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
 </head>
 <body>
-    <h1>Welcome to Rental Hub!</h1>
-    <p>Rental Hub is a site to find the latest and most up-to-date information about the home rental market.</p>
+    <div class="row first-info" style="background-image: url({% static 'images/homebackground.jpg' %})" ></div>
+    <h1>Welcome to Rentals Hub!</h1>
+    <p>Rentals Hub is a site to find the latest and most up-to-date information about the home rental market.<br>
+        When you're looking for your next place to live, get the latest info, don't overpay!
+    </p>
+    <p><a href="login">Login or Register Here</a></p>
+    <p><a href="main">Go to Main Market Page</a></p>
+    <button class="btn-primary" type="dropdown">Menu to pick a specific market</button> <br>
+    <button class="btn-primary" type="dropdown">Menu to pick a rent range</button> 
 </body>
 </html>
