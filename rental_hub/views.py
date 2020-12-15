@@ -2,23 +2,19 @@ from django.shortcuts import render, redirect, HttpResponse
 from django.contrib import messages
 from .models import User, UserManager
 import bcrypt
+import requests
 
 # CREATE
 def index(request):
     return render(request, 'index.html')
 
 def main(request):
-    if 'user_id' not in request.session:
-        return redirect('/main')
-    user = User.objects.get(id=request.session['user_id'])
-    context = {
-        'user': user
-    }
-    return render(request, 'main.html', context)
+    # if 'user_id' not in request.session:
+    return render(request, 'main.html')
 
 def register(request):
     if request.method == "GET":
-        return redirect('/')
+        return redirect('/main')
     errors = User.objects.validate(request.POST)
     if errors:
         for e in errors.values():
@@ -32,23 +28,14 @@ def register(request):
 # READ
 
 def login(request):
-    if request.method == "GET":
-        return redirect('/login')
-    if not User.objects.authenticate(request.POST['email'], request.POST['password']):
-        messages.error(request, 'Invalid Email/Password')
-        return redirect('/login')
-    user = User.objects.get(email=request.POST['email'])
-    request.session['user_id'] = user.id
-    return redirect('/main')
+    return render(request, 'login.html')
 
 def logout(request):
     request.session.clear()
     return redirect('/')
 
-
-
-# def markets
-#     pass
+def markets(request):
+    return render(request,'market.html')
 
 # UPDATE
 
@@ -61,19 +48,29 @@ def logout(request):
 #     }
 #     return render(request, 'myaccount.html', context)
 
-# def create_quote(request):
-#     if request.method == 'POST':
-#         errors = Quote.objects.validate(request.POST)
-#         if errors:
-#             for e in errors.values():
-#                 messages.error(request, e)
-#             return redirect('/quotes')
-#         quote = Quote.objects.create(author=request.POST['author'],quote_field=request.POST['content'], poster=User.objects.get(id=request.session['user_id']))
-#     return redirect('/quotes')
-
 # DELETE
 
 # def delete_market(request):
 #         market = Market.objects.filter().delete
 #         return redirect('/profile')
 
+
+def rent_estimate(request):
+    url = "https://realtymole-rental-estimate-v1.p.rapidapi.com/rentalPrice"
+
+    querystring = {
+        "address":"",
+        "bedrooms":"",
+        "bathrooms":"",
+        "propertyType":"",
+        "squareFootage":"",
+        "compCount":"5"}
+
+    headers = {
+        'x-rapidapi-key': "9005cdaf4dmsha7aa0f6d73dc67bp10d25djsn5aa317647eb0",
+        'x-rapidapi-host': "realtymole-rental-estimate-v1.p.rapidapi.com"
+        }
+
+    response = requests.request("GET", url, headers=headers, params=querystring)
+
+    print(response.text)

@@ -6,17 +6,55 @@
     <title>Rentals Hub</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="'static/CSS/style.css'">
 </head>
 <body>
-    <div class="row first-info" style="background-image: url({% static 'images/homebackground.jpg' %})" ></div>
-    <h1>Welcome to Rentals Hub!</h1>
-    <p>Rentals Hub is a site to find the latest and most up-to-date information about the home rental market.<br>
-        When you're looking for your next place to live, get the latest info, don't overpay!
-    </p>
-    <p><a href="login">Login or Register Here</a></p>
-    <p><a href="main">Go to Main Market Page</a></p>
-    <button class="btn-primary" type="dropdown">Menu to pick a specific market</button> <br>
-    <button class="btn-primary" type="dropdown">Menu to pick a rent range</button> 
+    <style>
+    body {
+        background-image: url('static/images/homebackground.JPG');
+        background-repeat:no-repeat;
+        background-size:100%;
+        margin: 20px;
+    }
+    </style>
+    <div id="content">
+        <h1>Welcome to Rentals Hub!</h1>
+        <p>Rentals Hub gives you the most up-to-date information about the home rental market.<br>
+            When you're looking for your next place to live, get the latest info, don't overpay!</p>
+        <p><a href="/login">Login or Register Here</a></p>
+        <p><span>Want to browse as a guest? </span><br>
+        <a href="/main">Go to Main Market Page</a></p>
+    </div>
+    <div class="dropdown">
+        <form action="/market" method="post">
+            {% csrf_token %}
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pick a specific market:
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="market/">Los Angeles County</a></li>
+                    <li><a href="market/int:market_id">Orange County</a></li>
+                    <li><a href="market/int:market_id">San Diego County</a></li>
+                    <li><a href="market/int:market_id">Riverside County</a></li>
+                    <li><a href="market/int:market_id">San Bernardino County</a></li>
+                </ul>
+            </button>
+        </form>
+        <br>
+        <br>
+        <form action="/market" method="post">
+            {% csrf_token %}
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Pick a rent range:
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#">$0 - 1,499</a></li>
+                    <li><a href="#">$1,500 - $1,999</a></li>
+                    <li><a href="#">$2,000 - $2,999</a></li>
+                    <li><a href="#">$3,000 - $3,999</a></li>
+                    <li><a href="#">$4,000 - $4,999</a></li>
+                    <li><a href="#">$5,000+</a></li>
+                </ul>
+            </button>
+        </form>
+    </div>
 </body>
 </html>

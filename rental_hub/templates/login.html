@@ -6,10 +6,18 @@
     <title>Login / Registration</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="'static/CSS/style.css'">
 </head>
 <body>
-    <h1>Login for Rentals Hub</h1>
+    <style>
+        body {
+            background-image: url('static/images/homebackground.JPG');
+            background-repeat:no-repeat;
+            background-size:100%;
+            margin: 20px;
+        }
+    </style>
+    <h1>Login to Rentals Hub</h1>
     {% if messages %}
     <ul class="messages">
         {% for message in messages %}
@@ -47,7 +55,7 @@
         </section>
         <section>
             <h2>Login</h2>
-            <form action="/login" method="post">
+            <form action="/main" method="post">
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="email">Email</label>

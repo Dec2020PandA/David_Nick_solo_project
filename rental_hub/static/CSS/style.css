@@ -1,6 +1,9 @@
 * {
     font-family: 'Hermit', monospace;
 }
+*h1 {
+    font-weight: bold;
+}
 #log-reg {
     display: flex;
     justify-content: space-between;
@@ -28,7 +31,17 @@ section {
 }
 
 body {
-    background-image:url('{{ STATIC_URL }}images/homebackground.JPG');
+    background-image: url('static/images/homebackground.JPG');
     background-repeat:no-repeat;
     background-size:100%;
+    margin: 20px;
+}
+
+form {
+    display: inline-block;
+    width: 500px;
+}
+
+.control-group {
+    margin-left: 20px;
 }

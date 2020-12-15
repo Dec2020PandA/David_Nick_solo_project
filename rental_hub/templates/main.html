@@ -6,11 +6,25 @@
     <title>Rentals Hub Market Database</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     {% load static %}
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="static/CSS/style.css">
 </head>
 <body>
-    <h1>Welcome to Rentals Hub!</h1>
+    <style>
+        body {
+            background-image: url('static/images/homebackground.JPG');
+            background-repeat:no-repeat;
+            background-size:100%;
+            margin: 20px;
+        }
+    </style>
+    <h1>Market Database</h1>
     <p>Check the markets below</p>
-    <a>Login or Register Here</a>
+    <a href='market/'>Los Angeles County</a><br>
+    <a href='market/int:market_id'>Orange County</a><br>
+    <a href='market/int:market_id'>San Diego County</a><br>
+    <a href='market/int:market_id'>Riverside County</a><br>
+    <a href='market/int:market_id'>San Bernardino County</a><br>
+    <br>
+    <a href='/'>Return to Home Page</a>
 </body>
 </html>
