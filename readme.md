@@ -3,10 +3,14 @@
 
 # What's New to Me:
 >    1) Google or other Maps APIs
-    2) Utilizing data from a 3rd party API (Rent Estimate by Rapid API)
-    3) Embedding images and videos in a site
-    4) Having an image-based background on each page
-    5) Maximizing Bootstrap usage
+>    
+>    2) Utilizing data from a 3rd party API (Rent Estimate by Rapid API)
+>    
+>    3) Embedding images and videos in a site
+>    
+>    4) Having an image-based background on each page
+>    
+>    5) Maximizing Bootstrap usage
 
 # Features List:
 >    P0: must haves, basic required functionality and functionality-required features
@@ -14,6 +18,7 @@
         - Dropdown Menus corresponding to criteria (select by market or by rent range)
         - Templates
         - Images
+
 >    P1: necessary features (beyond fundamentals) to showcase the purpose of the website
         - Bootstrap CSS
         - Back-end database management for each "market", containing its vital information
