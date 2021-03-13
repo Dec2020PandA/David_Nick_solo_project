@@ -10,7 +10,7 @@
 >    
 >    4) Having an image-based background on each page
 >    
->    5) Maximizing Bootstrap usage
+>    5) Maximizing Bootstrap styling usage
 
 ## Features List:
 
