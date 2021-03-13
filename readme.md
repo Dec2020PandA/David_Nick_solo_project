@@ -25,7 +25,7 @@
         - Proper many-to-many links
 
 >    P2: nicer features you may not get to right away but are needed for overall product down the road
-		- Rent Estimate API
+	- Rent Estimate API
         - Finding a way to pull in and measure raw data, in terms of $/square foot for the "markets" referenced
         - Tutorial or Marketing Videos on landing page to draw in prospective users
 
