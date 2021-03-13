@@ -16,26 +16,26 @@
 
 >P0: must haves, basic required functionality and functionality-required features
 >
-        - Django Admin
-        - Dropdown Menus corresponding to criteria (select by market or by rent range)
-        - Templates
-        - Images
+	- Django Admin
+	- Dropdown Menus corresponding to criteria (select by market or by rent range)
+	- Templates
+	- Images
 
 >P1: necessary features (beyond fundamentals) to showcase the purpose of the website
 >
-        - Bootstrap CSS
-        - Back-end database management for each "market", containing its vital information
-        - Proper many-to-many links
+	- Bootstrap CSS
+	- Back-end database management for each "market", containing its vital information
+	- Proper many-to-many links
 
 >P2: nicer features you may not get to right away but are needed for overall product down the road
 >
 	- Rent Estimate API
-        - Finding a way to pull in and measure raw data, in terms of $/square foot for the "markets" referenced
-        - Tutorial or Marketing Videos on landing page to draw in prospective users
+	- Finding a way to pull in and measure raw data, in terms of $/square foot for the "markets" referenced
+	- Tutorial or Marketing Videos on landing page to draw in prospective users
 
 >P3 and beyond: plans for the future of the project, fleshing it out to be "portfolio worthy"
 >
-        - Integrate a larger-scale database of properties from other 3rd party API's (Zillow and/or Redfin, for example)
-        - Pull median rent information based on determined market sizes
-        - Upscale to include 1000s of different "markets" - giving users many more options thus being viable for more people
+	- Integrate a larger-scale database of properties from other 3rd party API's (Zillow and/or Redfin, for example)
+	- Pull median rent information based on determined market sizes
+	- Upscale to include 1000s of different "markets" - giving users many more options thus being viable for more people
 
